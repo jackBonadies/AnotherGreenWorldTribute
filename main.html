@@ -10,16 +10,32 @@
 .dropdown{
   float: right;
 }
+#main-head{
+  background-color: #A0A0A0;
+  background-image: url("./images/AGW_Album_Full.jpg");
+  background-position: 0% 24%;
+  background-size: 500px 500px;
+  height: 30vh;
+}
+#main-body{
+  background-color:#A0A0A0;
+}
+
+#main-bottom{
+  background-color: lightblue;
+
+}
+
 </style>
 </head>
 
 <body>
-<div class="container-fluid text-center">
+<div id="main-head" class="container-fluid text-center">
   <h1>Another Green World<small>Brian Eno 1975</small></h1>
   <p>Resize this responsive page to see the effect!</p>
 </div>
 
-<div class="container">
+<div id="main-body" class="container">
   <div class="row">
     <div class="col-sm-1">
     </div>
@@ -36,9 +52,9 @@
     <div class="col-sm-1">
     </div>
   </div>
+</div>
 
-
-<div>
+<div id="main-bottom">
 <ul class="pagination pagination-lg text-center">
   <li><a href="#">1</a></li>
   <li><a href="#">2</a></li>
@@ -59,6 +75,7 @@
 
 <div id="demo" class="collapse">
 Lorem ipsum dolor text....
-</div> 
-</body> 
+</div>
+</div>
+</body>
 </html>
