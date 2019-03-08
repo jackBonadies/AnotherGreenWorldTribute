@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <title>Another Green World</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -12,10 +13,11 @@
 }
 #main-head{
   background-color: #A0A0A0;
-  background-image: url("./images/AGW_Album_Full.jpg");
-  background-position: 0% 24%;
-  background-size: 500px 500px;
+  background-image: url("./images/header.png");
   height: 30vh;
+  background-size: contain;
+  background-position: top;
+  background-repeat: repeat-x;
 }
 #main-body{
   background-color:#A0A0A0;
@@ -23,7 +25,27 @@
 
 #main-bottom{
   background-color: lightblue;
+}
 
+#AGW{
+
+  font-size: 40px;
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+  font-family: helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+#Eno{
+  font-size: 17px;
+  font-family: Ubuntu;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 28vw;
+  top: 7vh;
 }
 
 </style>
@@ -31,8 +53,8 @@
 
 <body>
 <div id="main-head" class="container-fluid text-center">
-  <h1>Another Green World<small>Brian Eno 1975</small></h1>
-  <p>Resize this responsive page to see the effect!</p>
+  <h1 id="AGW">Another Green World</h1>
+  <p id="Eno">Brian Eno, 1975</p>
 </div>
 
 <div id="main-body" class="container">
@@ -73,8 +95,6 @@
 </div>
  <button data-toggle="collapse" data-target="#demo">Collapsible</button>
 
-<div id="demo" class="collapse">
-Lorem ipsum dolor text....
 </div>
 </div>
 </body>
