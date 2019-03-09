@@ -4,8 +4,11 @@
 
 
 <style>
+body{
+  background-color: lightblue;
+}
 img {
-  shape-outside: url(./images/Untitled.png);
+  /* shape-outside: url("./images/x.png"); */
   float: left;
   position: relative;
   left: 10px;
@@ -23,15 +26,15 @@ $(document).ready( function() {
     $("#hi").animate( { left: '+=25px' },"slow",console.log("callback")  );
   });
   $('#hi').mouseenter(function(){
-    $("#hi").css("shape-outside","url(./images/Untitled.png)");
+    $("#hi").css("shape-outside","url(./images/x.png)");
     $('#hi').css("margin-right",'35px');
   });
 });
 </script>
 <p>Hello World, this is a page about Another Green World</p>
-<img src="./images/Untitled.png">
+<img src="./images/x.png">
 <div class="box">
-  <img src="./images/Untitled.png" id="hi">
+  <img src="./images/x.png" id="hi">
   <p>One November night in the year 1782, so the story runs, two brothers sat over their winter fire in the little French town of Annonay, watching the grey smoke-wreaths from the hearth curl up the wide chimney. Their names were Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discovery. Before that night—a memorable night, as it was to prove—hundreds of millions of people had watched the rising smoke-wreaths of their fires without drawing any special inspiration from the fact.</p>
   <p>One November night in the year 1782, so the story runs, two brothers sat over their winter fire in the little French town of Annonay, watching the grey smoke-wreaths from the hearth curl up the wide chimney. Their names were Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discovery. Before that night—a memorable night, as it was to prove—hundreds of millions of people had watched the rising smoke-wreaths of their fires without drawing any special inspiration from the fact.</p>
   <p>One November night in the year 1782, so the story runs, two brothers sat over their winter fire in the little French town of Annonay, watching the grey smoke-wreaths from the hearth curl up the wide chimney. Their names were Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discovery. Before that night—a memorable night, as it was to prove—hundreds of millions of people had watched the rising smoke-wreaths of their fires without drawing any special inspiration from the fact.</p>
