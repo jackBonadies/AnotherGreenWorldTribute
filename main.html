@@ -5,8 +5,11 @@
 <title>Another Green World</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="utf-8">
+<link rel="stylesheet" href="jquery-ui.min.css">
+<script src="./scripts/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 <style>
 .dropdown{
   float: right;
@@ -128,6 +131,28 @@ $(document).ready(function(){
   <img class="figures" src="./images/x.png">
   <img class="figures" src="./images/y.png">
   <img class="figures" src="./images/z.png">
+
+  <script>
+    function randomMovement(){
+      // $(".figures").css("width","10vw");
+    };
+    function bounce(){
+      $(".figures").effect( "bounce", { times: 3 }, "slow" );
+    };
+    $(document).ready(function(){
+      randomMovement();
+      $(".figures").mouseenter(function(){
+        $(this).effect("bounce",{timer: 1},"slow");//effect("bounce", { times: 3 }, "slow");
+      });
+      $(".figures").click(function(){
+        if($(this).css("transform") == "matrix(-1, 0, 0, 1, 0, 0)"){
+          $(this).css("transform","matrix(1, 0, 0, 1, 0, 0)");
+        }else{
+          $(this).css("transform","scale(-1, 1)");
+        }
+      });
+    });
+  </script>
 <!-- <ul class="pagination pagination-lg text-center">
   <li><a href="#">1</a></li>
   <li><a href="#">2</a></li>
