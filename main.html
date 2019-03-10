@@ -38,8 +38,8 @@
 .figures{
   width: 5vw;
   height:auto;
-  position:relative;
-  top: -10vh;
+  position:absolute;
+  bottom: 0vh;
 }
 
 #AGW{
@@ -177,7 +177,7 @@ $(document).ready(function(){
         var x = $(this);
         var randWait = Math.floor(Math.random()*20000) + 1;
         setTimeout(function(){
-          x.hide();
+          //x.hide();
         },randWait);
         console.log(index);
         console.log(value);
@@ -187,6 +187,20 @@ $(document).ready(function(){
       $(".figures").effect( "bounce", { times: 3 }, "slow" );
     };
     $(document).ready(function(){
+      var arrayFigures = document.getElementsByClassName("figures");
+      var total = arrayFigures.length;
+      var incr = 80 / total;
+      for(var i=0;i<arrayFigures.length;i++){
+        arrayFigures[i].style.left = i*incr + "vw";
+        var typeF = arrayFigures[i].getAttribute("src");
+        if(typeF=="./images/y.png"){
+          arrayFigures[i].style.bottom = "-10vh";
+        }
+      }
+      // $(".figures").each(function(index.value){
+      //   var x = Math.random()
+      //   $(this).css("left","")
+      // });
       var myVar = setInterval(randomMovement, 20001); //wihthin 20 sec every animation will finish
       randomMovement();
       $(".figures").mouseenter(function(){
