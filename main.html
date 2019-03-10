@@ -131,8 +131,28 @@ $(document).ready(function(){
   <img class="figures" src="./images/x.png">
   <img class="figures" src="./images/y.png">
   <img class="figures" src="./images/z.png">
+  <img class="figures" src="./images/x.png">
+  <img class="figures" src="./images/y.png">
+  <img class="figures" src="./images/z.png">
+  <img class="figures" src="./images/x.png">
+  <img class="figures" src="./images/y.png">
+  <img class="figures" src="./images/z.png">
 
   <script>
+    var lookUpFigure = [
+      "./images/x.png",
+      "./images/y.png",
+      "./images/z.png"
+    ];
+    function getIndice(x){
+      for(var i=0;i<lookUpFigure.length;i++){
+        if(lookUpFigure[i]==x){
+          return i;
+        }else{
+        }
+      }
+      alert("error");
+    };
     function randomMovement(){
       // $(".figures").css("width","10vw");
     };
@@ -150,6 +170,11 @@ $(document).ready(function(){
         }else{
           $(this).css("transform","scale(-1, 1)");
         }
+      });
+      $(".figures").dblclick(function(){
+        var cur = $(this).attr("src");
+        var x = getIndice(cur);
+        $(this).attr("src",lookUpFigure[(x+1)%lookUpFigure.length]);
       });
     });
   </script>
