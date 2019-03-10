@@ -72,6 +72,14 @@
   height:auto;
 }
 
+#parlor{
+  position:fixed;
+  right: 0vw;
+  bottom:-11vh;
+  width: 20vw;
+  height:auto;
+}
+
 </style>
 </head>
 <body>
@@ -146,6 +154,8 @@ $(document).ready(function(){
   <img class="figures" src="./images/x.png">
   <img class="figures" src="./images/y.png">
   <img class="figures" src="./images/z.png">
+  <img id="parlor" src="./images/hookah.png">
+
 
   <script>
     var lookUpFigure = [
@@ -163,12 +173,21 @@ $(document).ready(function(){
       alert("error");
     };
     function randomMovement(){
-      // $(".figures").css("width","10vw");
+      $(".figures").each(function(index, value){
+        var x = $(this);
+        var randWait = Math.floor(Math.random()*20000) + 1;
+        setTimeout(function(){
+          x.hide();
+        },randWait);
+        console.log(index);
+        console.log(value);
+      });
     };
     function bounce(){
       $(".figures").effect( "bounce", { times: 3 }, "slow" );
     };
     $(document).ready(function(){
+      var myVar = setInterval(randomMovement, 20001); //wihthin 20 sec every animation will finish
       randomMovement();
       $(".figures").mouseenter(function(){
         $(this).effect("bounce",{timer: 1},"slow");//effect("bounce", { times: 3 }, "slow");
