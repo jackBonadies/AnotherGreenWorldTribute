@@ -176,8 +176,10 @@ $(document).ready(function(){
       $(".figures").each(function(index, value){
         var x = $(this);
         var randWait = Math.floor(Math.random()*20000) + 1;
+        var randDistance = Math.floor(Math.random()*90);
+        var dis = randDistance + "vw";
         setTimeout(function(){
-          //x.hide();
+          x.animate({left:dis},5000);
         },randWait);
         console.log(index);
         console.log(value);
