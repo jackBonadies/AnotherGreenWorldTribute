@@ -220,6 +220,27 @@ $(document).ready(function(){
         var x = getIndice(cur);
         $(this).attr("src",lookUpFigure[(x+1)%lookUpFigure.length]);
       });
+      $("#angel").click(function(){
+        var randLoc = Math.floor(Math.random()*80);
+        var randVW = randLoc + "vw";
+        var st = "left:" + randVW;
+        $("#main-bottom").append("<img src='./images/x.png' class='figures' class='toMove' style=" + st + ">");
+        $(".figures").mouseenter(function(){
+          $(this).effect("bounce",{timer: 1},"slow");//effect("bounce", { times: 3 }, "slow");
+        });
+        $(".figures").click(function(){
+          if($(this).css("transform") == "matrix(-1, 0, 0, 1, 0, 0)"){
+            $(this).css("transform","matrix(1, 0, 0, 1, 0, 0)");
+          }else{
+            $(this).css("transform","scale(-1, 1)");
+          }
+        });
+        $(".figures").dblclick(function(){
+          var cur = $(this).attr("src");
+          var x = getIndice(cur);
+          $(this).attr("src",lookUpFigure[(x+1)%lookUpFigure.length]);
+        });
+      });
     });
   </script>
 <!-- <ul class="pagination pagination-lg text-center">
