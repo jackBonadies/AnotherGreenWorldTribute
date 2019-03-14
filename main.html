@@ -107,6 +107,22 @@ $(document).ready(function(){
     </div>
     <div class="col-sm-10" >
       <h3>Column 2</h3>
+      <button onclick="readerMode()">click</button>
+      <button onclick="animationMode()">click</button>
+      <script>
+      function readerMode(){
+        $(".figures").hide();
+        $("#angel").hide();
+        $("#parlor").hide();
+        $("#main-bottom").hide();
+      };
+      function animationMode(){
+        $(".figures").show();
+        $("#angel").show();
+        $("#parlor").show();
+        $("#main-bottom").show();
+      }
+      </script>
       <p>To Do: control panel, down key to make everyone start moving??, nother set of figures.  </p>
       <p>Ut enim ad..</p>
       <p>Test test test</p>
@@ -181,8 +197,6 @@ $(document).ready(function(){
         setTimeout(function(){
           x.animate({left:dis},5000);
         },randWait);
-        console.log(index);
-        console.log(value);
       });
     };
     function bounce(){
