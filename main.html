@@ -107,8 +107,10 @@ $(document).ready(function(){
     </div>
     <div class="col-sm-10" >
       <h3>Column 2</h3>
-      <button onclick="readerMode()">click</button>
-      <button onclick="animationMode()">click</button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" onclick="animationMode()">On</button>
+        <button type="button" class="btn btn-primary" onclick="readerMode()">Off</button>
+      </div>
       <script>
       function readerMode(){
         $(".figures").hide();
