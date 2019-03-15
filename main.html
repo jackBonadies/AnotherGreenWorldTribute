@@ -80,6 +80,30 @@
   height:auto;
 }
 
+.btn{
+  font-size: .6em;
+  background-color: grey;
+  border-color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#anime{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.side1{
+
+  outline: 2px solid #ccc;
+  outline-offset: -10px;
+  /* background-color: green; */
+}
+
+.sideLeft{
+  box-shadow: 0px 0px .5px 0px #ccc, inset -1px -1px 0 0 #ccc;
+}
+
 </style>
 </head>
 <body>
@@ -96,9 +120,16 @@ $(document).ready(function(){
 <img id="angel" src="./images/angel.png">
 <div id="main-body" class="container-fluid">
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-sm-1 side1">
+      <br>
+      <p><a href="#">About Site</a></p>
+      <p id="anime">Animations?</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" onclick="animationMode()">On</button>
+        <button type="button" class="btn btn-primary" onclick="readerMode()">Off</button>
+      </div>
     </div>
-    <div class="col-sm-10" >
+    <div class="col-sm-10 sideLeft" >
       <h3>Column 2</h3>
       <div class="btn-group">
         <button type="button" class="btn btn-primary" onclick="animationMode()">On</button>
