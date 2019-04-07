@@ -103,7 +103,9 @@
 <div class="menuOuter">
 <div id="menu">
   <div id="aboutMe" class="itemLevel1"><p><span class="arrow"></span>About Me</p></div>
-  <div id="presentation" class="itemLevel1"><p><span class="arrow"></span>Presentation</p></div>
+  <div id="presentation" class="itemLevel1"><p><span class="arrow"></span>My Presentation</p></div>
+  <div id="prevAssgn" class="itemLevel1"><p><span class="arrow"></span>Previous Assignments</p></div>
+  <div id="easterEggs" class="itemLevel1"><p><span class="arrow"></span>Easter Eggs</p></div>
 </div>
 </div>
 </div>
@@ -146,20 +148,20 @@ $(document).ready(function(){
   $("p").on("mouseleave",function(){
     $(this).css("backgroundColor","transparent");
   });
-  $(".itemLevel1").on("click",function(){
-    // setTimeout(function(){
-    //   $("#subOM").css("display", "initial");
-    // },500);
-    // setTimeout(function(){
-    //   $("#subO").css("display", "initial");
-    // },1000);
-    // setTimeout(function(){
-    //   $("#submenu").css("display", "initial");
-    // },1500);
-    // setTimeout(function(){
-    //   $("#backButton").css("display", "initial");
-    // },1500);
-  });
+  $.fn.display1 = function(){
+    setTimeout(function(){
+      $("#subOM").css("display", "initial");
+    },500);
+    setTimeout(function(){
+      $("#subO").css("display", "initial");
+    },1000);
+    setTimeout(function(){
+      $("#submenu").css("display", "initial");
+    },1500);
+    setTimeout(function(){
+      $("#backButton").css("display", "initial");
+    },1500);
+  };
   $("#backButton").on("click",function(){
     $.fn.withdraw();
   });
@@ -182,18 +184,19 @@ $(document).ready(function(){
     $("p").on("mouseleave",function(){
       $(this).css("backgroundColor","transparent");
     });
-    setTimeout(function(){
-      $("#subOM").css("display", "initial");
-    },500);
-    setTimeout(function(){
-      $("#subO").css("display", "initial");
-    },1000);
-    setTimeout(function(){
-      $("#submenu").css("display", "initial");
-    },1500);
-    setTimeout(function(){
-      $("#backButton").css("display", "initial");
-    },1500);
+    $.fn.display1();
+    // setTimeout(function(){
+    //   $("#subOM").css("display", "initial");
+    // },500);
+    // setTimeout(function(){
+    //   $("#subO").css("display", "initial");
+    // },1000);
+    // setTimeout(function(){
+    //   $("#submenu").css("display", "initial");
+    // },1500);
+    // setTimeout(function(){
+    //   $("#backButton").css("display", "initial");
+    // },1500);
   });
 });
 
