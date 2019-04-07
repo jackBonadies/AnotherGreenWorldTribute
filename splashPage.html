@@ -1,0 +1,207 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+  @font-face {
+  font-family:"WWttf";
+  src: url("CC Wild Words Roman.ttf") format("truetype");
+  }
+  body{
+    background-image: url('./images/bckgnd.png');
+    height: 10vh;
+    width: auto;
+    repeat: repeat;
+  }
+  #menu{
+    float:left;
+    height: 70vh;
+    width: 50vh;
+    position: relative;
+    left: 2vw;
+    top: 2vw;
+    background-color: #BCD4E7;
+  }
+
+  .menuOutermost{
+    float:left;
+    height: 70vh;
+    width: 50vh;
+    position: relative;
+    z-index: -2;
+    left: 10vw;
+    top: 10vh;
+    background-color: black;
+  }
+
+  .menuOuter{
+    float:left;
+    height: 70vh;
+    width: 50vh;
+    position: relative;
+    z-index: -1;
+    left: 2vw;
+    top: 2vw;
+    background-color: #F2D3D7;
+  }
+  #submenu{
+    float:left;
+    height: 70vh;
+    width: 50vh;
+    position: relative;
+    left: 2vw;
+    top: 2vw;
+    background-color: #F2D3D7;
+  }
+  p{
+    /* background-color:white; */
+    position: relative;
+    font-family: WWttf;
+  }
+  span{
+    font-family: WWttf;
+    white-space:pre;
+  }
+
+  .arrow{
+    font-size: .8em;
+    white-space:pre;
+  }
+
+  #submenu{
+    display: none;
+  }
+  .class{
+    position:fixed;
+  }
+  #subO{
+    background-color:#BCD4E7;
+    display: none;
+  }
+  #subOM{
+    left: 23vw;
+    top: 15vh;
+    display:none;
+  }
+  #backButton{
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+    border-width: 3px;
+    border-color:black;
+    border-style:solid;
+    display: none;
+  }
+  #ar{
+    font-weight:bolder;
+  }
+  </style>
+
+</head>
+
+<body>
+<div class="menuOutermost">
+<div class="menuOuter">
+<div id="menu">
+  <div id="aboutMe" class="itemLevel1"><p><span class="arrow"></span>About Me</p></div>
+  <div id="presentation" class="itemLevel1"><p><span class="arrow"></span>Presentation</p></div>
+</div>
+</div>
+</div>
+
+<div class="menuOutermost" id="subOM">
+<div class="menuOuter" id="subO">
+<div id="submenu">
+</div>
+</div>
+</div>
+<div id="backButton">
+  <span><span id="ar"><strong>&larr;</strong></span>Back </span>
+</div>
+<script>
+$(document).ready(function(){
+  function dispArrow(){
+     this.innerHTML = '&#x25B6';
+  };
+  $.fn.getNum = function(){
+    var count = $("#submenu").children().length;
+    return count;
+  };
+  $.fn.withdraw = function(){
+    setTimeout(function(){
+      $("#subOM").css("display", "none");
+    },1500);
+    setTimeout(function(){
+      $("#subO").css("display", "none");
+    },1000);
+    setTimeout(function(){
+      $("#submenu").css("display", "none");
+    },500);
+    setTimeout(function(){
+      $("#backButton").css("display", "none");
+    },1500);
+  };
+  $("p").on("mouseenter",function(){
+    $(this).css("backgroundColor","white");
+  });
+  $("p").on("mouseleave",function(){
+    $(this).css("backgroundColor","transparent");
+  });
+  $(".itemLevel1").on("click",function(){
+    // setTimeout(function(){
+    //   $("#subOM").css("display", "initial");
+    // },500);
+    // setTimeout(function(){
+    //   $("#subO").css("display", "initial");
+    // },1000);
+    // setTimeout(function(){
+    //   $("#submenu").css("display", "initial");
+    // },1500);
+    // setTimeout(function(){
+    //   $("#backButton").css("display", "initial");
+    // },1500);
+  });
+  $("#backButton").on("click",function(){
+    $.fn.withdraw();
+  });
+  $("#aboutMe").on("click",function(){
+    $('#submenu').empty();
+    $("#submenu").append("<p>Resume</p>");
+    $("#submenu").append("<p>Obligatory 1st Slide</p>");
+    $("#submenu").append("<p>github</p>");
+    $("#submenu").append("<p>other links</p>");
+    $("#submenu").append("<p>More Info</p>");
+    var height1 = $.fn.getNum()*6;
+    height1 = height1 + "vh";
+    $("#submenu").css("height",height1);
+    $("#subO").css("height",height1);
+    $("#subOM").css("height",height1);
+
+    $("p").on("mouseenter",function(){
+      $(this).css("backgroundColor","white");
+    });
+    $("p").on("mouseleave",function(){
+      $(this).css("backgroundColor","transparent");
+    });
+    setTimeout(function(){
+      $("#subOM").css("display", "initial");
+    },500);
+    setTimeout(function(){
+      $("#subO").css("display", "initial");
+    },1000);
+    setTimeout(function(){
+      $("#submenu").css("display", "initial");
+    },1500);
+    setTimeout(function(){
+      $("#backButton").css("display", "initial");
+    },1500);
+  });
+});
+
+// var arrows = document.getElementsByClassName("arrow");
+// for (var i = 0; i < arrows.length; i++) {
+//      arrows[i].addEventListener('hover', dispArrow, false);
+// };
+</script>
+
+</body>
+</html>
