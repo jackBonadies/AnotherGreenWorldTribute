@@ -33,6 +33,19 @@
     background-color: black;
   }
 
+  #gifbox{
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    right: 10vw;
+    bottom: 10vw;
+    background-color: #BCD4E7;
+    border-style: solid;
+    border-color: black;
+    border-width: 1vh;
+    display: none;
+  }
+
   .menuOuter{
     float:left;
     height: 70vh;
@@ -51,6 +64,10 @@
     left: 2vw;
     top: 2vw;
     background-color: #F2D3D7;
+  }
+  img{
+    height: 20vh;
+    width: auto;
   }
   p{
     /* background-color:white; */
@@ -116,6 +133,10 @@
 </div>
 </div>
 </div>
+<div id="gifbox">
+  <img id="gif" src="./pk1.gif"></img>
+</div>
+
 <div id="backButton">
   <span><span id="ar"><strong>&larr;</strong></span>Back </span>
 </div>
@@ -139,15 +160,21 @@ $(document).ready(function(){
       $("#submenu").css("display", "none");
     },500);
     setTimeout(function(){
+      $("#gifbox").css("display", "none");
+    },500);
+    setTimeout(function(){
       $("#backButton").css("display", "none");
     },1500);
   };
-  $("p").on("mouseenter",function(){
-    $(this).css("backgroundColor","white");
-  });
-  $("p").on("mouseleave",function(){
-    $(this).css("backgroundColor","transparent");
-  });
+  $.fn.pAnimation = function(){
+    $("p").on("mouseenter",function(){
+      $(this).css("backgroundColor","white");
+    });
+    $("p").on("mouseleave",function(){
+      $(this).css("backgroundColor","transparent");
+    });
+  };
+  $.fn.pAnimation();
   $.fn.display1 = function(){
     setTimeout(function(){
       $("#subOM").css("display", "initial");
@@ -161,6 +188,9 @@ $(document).ready(function(){
     setTimeout(function(){
       $("#backButton").css("display", "initial");
     },1500);
+    setTimeout(function(){
+      $("#gifbox").css("display", "initial");
+    },1500);
   };
   $("#backButton").on("click",function(){
     $.fn.withdraw();
@@ -172,31 +202,50 @@ $(document).ready(function(){
     $("#submenu").append("<p>github</p>");
     $("#submenu").append("<p>other links</p>");
     $("#submenu").append("<p>More Info</p>");
-    var height1 = $.fn.getNum()*6;
-    height1 = height1 + "vh";
+    var height1 = $.fn.getNum()*5;
+    height1 = height1 + 3 + "vh";
     $("#submenu").css("height",height1);
     $("#subO").css("height",height1);
     $("#subOM").css("height",height1);
-
-    $("p").on("mouseenter",function(){
-      $(this).css("backgroundColor","white");
-    });
-    $("p").on("mouseleave",function(){
-      $(this).css("backgroundColor","transparent");
-    });
+    $.fn.pAnimation();
     $.fn.display1();
-    // setTimeout(function(){
-    //   $("#subOM").css("display", "initial");
-    // },500);
-    // setTimeout(function(){
-    //   $("#subO").css("display", "initial");
-    // },1000);
-    // setTimeout(function(){
-    //   $("#submenu").css("display", "initial");
-    // },1500);
-    // setTimeout(function(){
-    //   $("#backButton").css("display", "initial");
-    // },1500);
+  });
+  $("#presentation").on("click",function(){
+    $('#submenu').empty();
+    $("#submenu").append("<p>Brian Eno</p>");
+    var height1 = $.fn.getNum()*5;
+    height1 = height1 + 3 + "vh";
+    $("#submenu").css("height",height1);
+    $("#subO").css("height",height1);
+    $("#subOM").css("height",height1);
+    $.fn.pAnimation();
+    $.fn.display1();
+  });
+  $("#prevAssgn").on("click",function(){
+    $('#submenu').empty();
+    $("#submenu").append("<p>Week 1</p>");
+    $("#submenu").append("<p>Week 2</p>");
+    $("#submenu").append("<p>Week 3</p>");
+    $("#submenu").append("<p>Week 4</p>");
+    $("#submenu").append("<p>Week 5</p>");
+    var height1 = $.fn.getNum()*5;
+    height1 = height1 + 3 + "vh";
+    $("#submenu").css("height",height1);
+    $("#subO").css("height",height1);
+    $("#subOM").css("height",height1);
+    $.fn.pAnimation();
+    $.fn.display1();
+  });
+  $("#gif").on("click",function(){
+    var srcGif = $("#gif").attr("src");
+    var end = srcGif.substring(srcGif.length-4, srcGif.length);
+    var beg = srcGif.substring(0,4);
+    var num = srcGif.substring(4,srcGif.length-4);
+    num = parseInt(num) + 1;
+    num = num % 17;
+    var test = beg + num + end;
+    $("#gif").attr("src",test);
+    //size the gifs correctly!! comp width and height!!
   });
 });
 
