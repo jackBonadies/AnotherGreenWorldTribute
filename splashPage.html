@@ -6,6 +6,14 @@
   font-family:"WWttf";
   src: url("CC Wild Words Roman.ttf") format("truetype");
   }
+  .flipped {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+  }
   body{
     background-image: url('./images/bckgnd.png');
     height: 10vh;
@@ -20,6 +28,9 @@
     left: 2vw;
     top: 2vw;
     background-color: #BCD4E7;
+  }
+  span{
+    font-size: 3vh;
   }
 
   .menuOutermost{
@@ -69,7 +80,10 @@
     height: 20vh;
     width: auto;
   }
-  p{
+  a{
+    text-decoration:none;
+  } 
+  p, a{
     /* background-color:white; */
     position: relative;
     font-family: WWttf;
@@ -111,6 +125,13 @@
   }
   #ar{
     font-weight:bolder;
+  }
+  .runner{
+    position: absolute;
+    left: 0vw;
+    top: 50vh;
+    transform: scaleX(-1);
+    display: none;
   }
   </style>
 
@@ -210,10 +231,13 @@ $(document).ready(function(){
     $("#subOM").css("height",height1);
     $.fn.pAnimation();
     $.fn.display1();
+    $("#gif").attr("src","./pk1.gif");
   });
   $("#presentation").on("click",function(){
     $('#submenu').empty();
     $("#submenu").append("<p>Brian Eno</p>");
+    $("#submenu").append("<p id='link1'>Albums Script</p>");
+    $("#link1").on("click",function(){location.href="/Users/jackbonadies/lastFMtop50/index.html";});
     var height1 = $.fn.getNum()*5;
     height1 = height1 + 3 + "vh";
     $("#submenu").css("height",height1);
@@ -221,6 +245,7 @@ $(document).ready(function(){
     $("#subOM").css("height",height1);
     $.fn.pAnimation();
     $.fn.display1();
+    $("#gif").attr("src","./pk13.gif");
   });
   $("#prevAssgn").on("click",function(){
     $('#submenu').empty();
@@ -236,6 +261,7 @@ $(document).ready(function(){
     $("#subOM").css("height",height1);
     $.fn.pAnimation();
     $.fn.display1();
+    $("#gif").attr("src","./pk16.gif");
   });
   $("#gif").on("click",function(){
     var srcGif = $("#gif").attr("src");
@@ -248,6 +274,22 @@ $(document).ready(function(){
     $("#gif").attr("src",test);
     //size the gifs correctly!! comp width and height!!
   });
+  $("#easterEggs").on("click",function(){
+    $(".runner").each(function(index, el){
+     setTimeout(function(){
+        var top1 = index*15 + "vh";
+        if(index==5 || index==0){
+          $(el).css("width","20vh");
+          $(el).css("height","auto");
+        };
+        $(el).css("top",top1);
+        $(el).css("display","block");
+        $(el).animate({left:"+=80vw"},2000,function(){$(el).css("transform","none")});
+        $(el).animate({left:"-=80vw"},2000,function(){$(el).css("transform","scaleX(-1)")});
+        $(el).animate({left:"+=95vw"},2000,function(){$(el).css("display","none")});
+     },index*1500);
+    });
+  });
 });
 
 // var arrows = document.getElementsByClassName("arrow");
@@ -255,6 +297,13 @@ $(document).ready(function(){
 //      arrows[i].addEventListener('hover', dispArrow, false);
 // };
 </script>
-
+<div id="run">
+  <img class="runner" src="./images/runners/1.gif"></img>
+  <img class="runner" src="./images/runners/2.gif"></img>
+  <img class="runner" src="./images/runners/3.gif"></img>
+  <img class="runner" src="./images/runners/5.gif"></img>
+  <img class="runner" src="./images/runners/6.gif"></img>
+  <img class="runner" src="./images/runners/7.gif"></img>
+</div>
 </body>
 </html>
