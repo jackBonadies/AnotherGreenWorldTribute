@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><meta name="viewport" content="width=device-width"><title>file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/splashPage.html</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css"></head><body id="viewsource" class="highlight" style="-moz-tab-size: 4" contextmenu="actions"><pre id="line1"><span></span><span class="error" title="Start tag seen without seeing a doctype first. Expected “&lt;!DOCTYPE html&gt;”.">&lt;<span class="start-tag">html</span>&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line3"></span>  </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line4"></span>  </span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line5"></span>  @font-face {
+<span id="line6"></span>  font-family:"WWttf";
+<span id="line7"></span>  src: url("CC Wild Words Roman.ttf") format("truetype");
+<span id="line8"></span>  }
+<span id="line9"></span>  .flipped {
+<span id="line10"></span>    transform: scale(-1, 1);
+<span id="line11"></span>    -moz-transform: scale(-1, 1);
+<span id="line12"></span>    -webkit-transform: scale(-1, 1);
+<span id="line13"></span>    -o-transform: scale(-1, 1);
+<span id="line14"></span>    -khtml-transform: scale(-1, 1);
+<span id="line15"></span>    -ms-transform: scale(-1, 1);
+<span id="line16"></span>  }
+<span id="line17"></span>  body{
+<span id="line18"></span>    background-image: url('./images/bckgnd.png');
+<span id="line19"></span>    height: 10vh;
+<span id="line20"></span>    width: auto;
+<span id="line21"></span>    repeat: repeat;
+<span id="line22"></span>  }
+<span id="line23"></span>  #menu{
+<span id="line24"></span>    float:left;
+<span id="line25"></span>    height: 70vh;
+<span id="line26"></span>    width: 50vh;
+<span id="line27"></span>    position: relative;
+<span id="line28"></span>    left: 2vw;
+<span id="line29"></span>    top: 2vw;
+<span id="line30"></span>    background-color: #BCD4E7;
+<span id="line31"></span>  }
+<span id="line32"></span>  span{
+<span id="line33"></span>    font-size: 3vh;
+<span id="line34"></span>  }
+<span id="line35"></span>
+<span id="line36"></span>  .menuOutermost{
+<span id="line37"></span>    float:left;
+<span id="line38"></span>    height: 70vh;
+<span id="line39"></span>    width: 50vh;
+<span id="line40"></span>    position: relative;
+<span id="line41"></span>    z-index: -2;
+<span id="line42"></span>    left: 10vw;
+<span id="line43"></span>    top: 10vh;
+<span id="line44"></span>    background-color: black;
+<span id="line45"></span>  }
+<span id="line46"></span>
+<span id="line47"></span>  #gifbox{
+<span id="line48"></span>    height: 20vh;
+<span id="line49"></span>    width: 20vh;
+<span id="line50"></span>    position: absolute;
+<span id="line51"></span>    right: 10vw;
+<span id="line52"></span>    bottom: 10vw;
+<span id="line53"></span>    background-color: #BCD4E7;
+<span id="line54"></span>    border-style: solid;
+<span id="line55"></span>    border-color: black;
+<span id="line56"></span>    border-width: 1vh;
+<span id="line57"></span>    display: none;
+<span id="line58"></span>  }
+<span id="line59"></span>
+<span id="line60"></span>  .menuOuter{
+<span id="line61"></span>    float:left;
+<span id="line62"></span>    height: 70vh;
+<span id="line63"></span>    width: 50vh;
+<span id="line64"></span>    position: relative;
+<span id="line65"></span>    z-index: -1;
+<span id="line66"></span>    left: 2vw;
+<span id="line67"></span>    top: 2vw;
+<span id="line68"></span>    background-color: #F2D3D7;
+<span id="line69"></span>  }
+<span id="line70"></span>  #submenu{
+<span id="line71"></span>    float:left;
+<span id="line72"></span>    height: 70vh;
+<span id="line73"></span>    width: 50vh;
+<span id="line74"></span>    position: relative;
+<span id="line75"></span>    left: 2vw;
+<span id="line76"></span>    top: 2vw;
+<span id="line77"></span>    background-color: #F2D3D7;
+<span id="line78"></span>  }
+<span id="line79"></span>  img{
+<span id="line80"></span>    height: 20vh;
+<span id="line81"></span>    width: auto;
+<span id="line82"></span>  }
+<span id="line83"></span>  a{
+<span id="line84"></span>    text-decoration:none;
+<span id="line85"></span>  }
+<span id="line86"></span>  p, a{
+<span id="line87"></span>    /* background-color:white; */
+<span id="line88"></span>    position: relative;
+<span id="line89"></span>    font-family: WWttf;
+<span id="line90"></span>    font-size: 2.3vh;
+<span id="line91"></span>  }
+<span id="line92"></span>  span{
+<span id="line93"></span>    font-family: WWttf;
+<span id="line94"></span>    white-space:pre;
+<span id="line95"></span>  }
+<span id="line96"></span>
+<span id="line97"></span>  .arrow{
+<span id="line98"></span>    font-size: .8em;
+<span id="line99"></span>    white-space:pre;
+<span id="line100"></span>  }
+<span id="line101"></span>
+<span id="line102"></span>  #submenu{
+<span id="line103"></span>    display: none;
+<span id="line104"></span>  }
+<span id="line105"></span>  .class{
+<span id="line106"></span>    position:fixed;
+<span id="line107"></span>  }
+<span id="line108"></span>  #subO{
+<span id="line109"></span>    background-color:#BCD4E7;
+<span id="line110"></span>    display: none;
+<span id="line111"></span>  }
+<span id="line112"></span>  #subOM{
+<span id="line113"></span>    left: 23vw;
+<span id="line114"></span>    top: 15vh;
+<span id="line115"></span>    display:none;
+<span id="line116"></span>  }
+<span id="line117"></span>  #backButton{
+<span id="line118"></span>    position: absolute;
+<span id="line119"></span>    right: 1vw;
+<span id="line120"></span>    top: 1vh;
+<span id="line121"></span>    border-width: 3px;
+<span id="line122"></span>    border-color:black;
+<span id="line123"></span>    border-style:solid;
+<span id="line124"></span>    display: none;
+<span id="line125"></span>  }
+<span id="line126"></span>  #ar{
+<span id="line127"></span>    font-weight:bolder;
+<span id="line128"></span>  }
+<span id="line129"></span>  .runner{
+<span id="line130"></span>    position: absolute;
+<span id="line131"></span>    left: 0vw;
+<span id="line132"></span>    top: 50vh;
+<span id="line133"></span>    transform: scaleX(-1);
+<span id="line134"></span>    display: none;
+<span id="line135"></span>  }
+<span id="line136"></span>  </span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line137"></span>
+<span id="line138"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line139"></span>
+<span id="line140"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line141"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">menuOutermost</a>"&gt;</span><span>
+<span id="line142"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">menuOuter</a>"&gt;</span><span>
+<span id="line143"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">menu</a>"&gt;</span><span>
+<span id="line144"></span>  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">aboutMe</a>" <span class="attribute-name">class</span>="<a class="attribute-value">itemLevel1</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">arrow</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>About Me</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line145"></span>  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">presentation</a>" <span class="attribute-name">class</span>="<a class="attribute-value">itemLevel1</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">arrow</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>My Presentation</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line146"></span>  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">prevAssgn</a>" <span class="attribute-name">class</span>="<a class="attribute-value">itemLevel1</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">arrow</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>Previous Assignments</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line147"></span>  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">easterEggs</a>" <span class="attribute-name">class</span>="<a class="attribute-value">itemLevel1</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">arrow</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>Easter Eggs</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line148"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line149"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line150"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line151"></span>
+<span id="line152"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">menuOutermost</a>" <span class="attribute-name">id</span>="<a class="attribute-value">subOM</a>"&gt;</span><span>
+<span id="line153"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">menuOuter</a>" <span class="attribute-name">id</span>="<a class="attribute-value">subO</a>"&gt;</span><span>
+<span id="line154"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">submenu</a>"&gt;</span><span>
+<span id="line155"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line156"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line157"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line158"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">gifbox</a>"&gt;</span><span>
+<span id="line159"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">id</span>="<a class="attribute-value">gif</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/pk1.gif">./pk1.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line160"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line161"></span>
+<span id="line162"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">backButton</a>"&gt;</span><span>
+<span id="line163"></span>  </span><span>&lt;<span class="start-tag">span</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">ar</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">strong</span>&gt;</span><span><span class="entity"><span>&amp;</span>larr;</span></span><span>&lt;/<span class="end-tag">strong</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>Back </span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line164"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line165"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line166"></span>$(document).ready(function(){
+<span id="line167"></span>  function dispArrow(){
+<span id="line168"></span>     this.innerHTML = '&amp;#x25B6';
+<span id="line169"></span>  };
+<span id="line170"></span>  $.fn.getNum = function(){
+<span id="line171"></span>    var count = $("#submenu").children().length;
+<span id="line172"></span>    return count;
+<span id="line173"></span>  };
+<span id="line174"></span>  $.fn.withdraw = function(){
+<span id="line175"></span>    setTimeout(function(){
+<span id="line176"></span>      $("#subOM").css("display", "none");
+<span id="line177"></span>    },1500);
+<span id="line178"></span>    setTimeout(function(){
+<span id="line179"></span>      $("#subO").css("display", "none");
+<span id="line180"></span>    },1000);
+<span id="line181"></span>    setTimeout(function(){
+<span id="line182"></span>      $("#submenu").css("display", "none");
+<span id="line183"></span>    },500);
+<span id="line184"></span>    setTimeout(function(){
+<span id="line185"></span>      $("#gifbox").css("display", "none");
+<span id="line186"></span>    },500);
+<span id="line187"></span>    setTimeout(function(){
+<span id="line188"></span>      $("#backButton").css("display", "none");
+<span id="line189"></span>    },1500);
+<span id="line190"></span>  };
+<span id="line191"></span>  $.fn.pAnimation = function(){
+<span id="line192"></span>    $("p").on("mouseenter",function(){
+<span id="line193"></span>      $(this).css("backgroundColor","white");
+<span id="line194"></span>    });
+<span id="line195"></span>    $("p").on("mouseleave",function(){
+<span id="line196"></span>      $(this).css("backgroundColor","transparent");
+<span id="line197"></span>    });
+<span id="line198"></span>  };
+<span id="line199"></span>  $.fn.pAnimation();
+<span id="line200"></span>  $.fn.display1 = function(){
+<span id="line201"></span>    setTimeout(function(){
+<span id="line202"></span>      $("#subOM").css("display", "initial");
+<span id="line203"></span>    },500);
+<span id="line204"></span>    setTimeout(function(){
+<span id="line205"></span>      $("#subO").css("display", "initial");
+<span id="line206"></span>    },1000);
+<span id="line207"></span>    setTimeout(function(){
+<span id="line208"></span>      $("#submenu").css("display", "initial");
+<span id="line209"></span>    },1500);
+<span id="line210"></span>    setTimeout(function(){
+<span id="line211"></span>      $("#backButton").css("display", "initial");
+<span id="line212"></span>    },1500);
+<span id="line213"></span>    setTimeout(function(){
+<span id="line214"></span>      $("#gifbox").css("display", "initial");
+<span id="line215"></span>    },1500);
+<span id="line216"></span>  };
+<span id="line217"></span>  $("#backButton").on("click",function(){
+<span id="line218"></span>    $.fn.withdraw();
+<span id="line219"></span>  });
+<span id="line220"></span>  $("#aboutMe").on("click",function(){
+<span id="line221"></span>    $('#submenu').empty();
+<span id="line222"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Resume</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line223"></span>    $("#submenu").append("</span><span>&lt;p</span><span> id='link2'&gt;Obligatory 1st Slide</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line224"></span>    $("#link2").on("click",function(){window.open('/Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/wk1/Bonadies_week1.html', '_blank');});
+<span id="line225"></span>    $("#submenu").append("</span><span>&lt;p</span><span> id='link3'&gt;github</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line226"></span>    $("#link3").on("click",function(){window.open('https://github.com/jackBonadies','_blank');});
+<span id="line227"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;other links</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line228"></span>    $("#submenu").append("</span><span>&lt;p</span><span> id='link4'&gt;More Info</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line229"></span>    $("#link4").on("click",function(){window.open('view-source:file://Users/jackbonadies/DesktopAnotherGreenWorldWebTribute/splashPage.html','_blank');});
+<span id="line230"></span>
+<span id="line231"></span>
+<span id="line232"></span>    var height1 = $.fn.getNum()*5;
+<span id="line233"></span>    height1 = height1 + 3 + "vh";
+<span id="line234"></span>    $("#submenu").css("height",height1);
+<span id="line235"></span>    $("#subO").css("height",height1);
+<span id="line236"></span>    $("#subOM").css("height",height1);
+<span id="line237"></span>    $.fn.pAnimation();
+<span id="line238"></span>    $.fn.display1();
+<span id="line239"></span>    $("#gif").attr("src","./pk1.gif");
+<span id="line240"></span>  });
+<span id="line241"></span>  $("#presentation").on("click",function(){
+<span id="line242"></span>    $('#submenu').empty();
+<span id="line243"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Brian Eno</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line244"></span>    $("#submenu").append("</span><span>&lt;p</span><span> id='link1'&gt;Albums Script</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line245"></span>    $("#link1").on("click",function(){location.href="/Users/jackbonadies/lastFMtop50/index.html";});
+<span id="line246"></span>    var height1 = $.fn.getNum()*5;
+<span id="line247"></span>    height1 = height1 + 3 + "vh";
+<span id="line248"></span>    $("#submenu").css("height",height1);
+<span id="line249"></span>    $("#subO").css("height",height1);
+<span id="line250"></span>    $("#subOM").css("height",height1);
+<span id="line251"></span>    $.fn.pAnimation();
+<span id="line252"></span>    $.fn.display1();
+<span id="line253"></span>    $("#gif").attr("src","./pk13.gif");
+<span id="line254"></span>  });
+<span id="line255"></span>  $("#prevAssgn").on("click",function(){
+<span id="line256"></span>    $('#submenu').empty();
+<span id="line257"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Week 1</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line258"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Week 2</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line259"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Week 3</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line260"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Week 4</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line261"></span>    $("#submenu").append("</span><span>&lt;p</span><span>&gt;Week 5</span><span>&lt;/<span></span>p</span><span>&gt;");
+<span id="line262"></span>    var height1 = $.fn.getNum()*5;
+<span id="line263"></span>    height1 = height1 + 3 + "vh";
+<span id="line264"></span>    $("#submenu").css("height",height1);
+<span id="line265"></span>    $("#subO").css("height",height1);
+<span id="line266"></span>    $("#subOM").css("height",height1);
+<span id="line267"></span>    $.fn.pAnimation();
+<span id="line268"></span>    $.fn.display1();
+<span id="line269"></span>    $("#gif").attr("src","./pk16.gif");
+<span id="line270"></span>  });
+<span id="line271"></span>  $("#gif").on("click",function(){
+<span id="line272"></span>    var srcGif = $("#gif").attr("src");
+<span id="line273"></span>    var end = srcGif.substring(srcGif.length-4, srcGif.length);
+<span id="line274"></span>    var beg = srcGif.substring(0,4);
+<span id="line275"></span>    var num = srcGif.substring(4,srcGif.length-4);
+<span id="line276"></span>    num = parseInt(num) + 1;
+<span id="line277"></span>    num = num % 17;
+<span id="line278"></span>    var test = beg + num + end;
+<span id="line279"></span>    $("#gif").attr("src",test);
+<span id="line280"></span>    //size the gifs correctly!! comp width and height!!
+<span id="line281"></span>  });
+<span id="line282"></span>  $("#easterEggs").on("click",function(){
+<span id="line283"></span>    $(".runner").each(function(index, el){
+<span id="line284"></span>     setTimeout(function(){
+<span id="line285"></span>        var top1 = index*15 + "vh";
+<span id="line286"></span>        if(index==5 || index==0){
+<span id="line287"></span>          $(el).css("width","20vh");
+<span id="line288"></span>          $(el).css("height","auto");
+<span id="line289"></span>        };
+<span id="line290"></span>        $(el).css("top",top1);
+<span id="line291"></span>        $(el).css("display","block");
+<span id="line292"></span>        $(el).animate({left:"+=80vw"},2000,function(){$(el).css("transform","none")});
+<span id="line293"></span>        $(el).animate({left:"-=80vw"},2000,function(){$(el).css("transform","scaleX(-1)")});
+<span id="line294"></span>        $(el).animate({left:"+=95vw"},2000,function(){$(el).css("display","none")});
+<span id="line295"></span>     },index*1500);
+<span id="line296"></span>    });
+<span id="line297"></span>  });
+<span id="line298"></span>});
+<span id="line299"></span>
+<span id="line300"></span>// var arrows = document.getElementsByClassName("arrow");
+<span id="line301"></span>// for (var i = 0; i </span><span>&lt; </span><span>arrows.length; i++) {
+<span id="line302"></span>//      arrows[i].addEventListener('hover', dispArrow, false);
+<span id="line303"></span>// };
+<span id="line304"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line305"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">run</a>"&gt;</span><span>
+<span id="line306"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/1.gif">./images/runners/1.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line307"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/2.gif">./images/runners/2.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line308"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/3.gif">./images/runners/3.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line309"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/5.gif">./images/runners/5.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line310"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/6.gif">./images/runners/6.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line311"></span>  </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">class</span>="<a class="attribute-value">runner</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:file:///Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/images/runners/7.gif">./images/runners/7.gif</a>"&gt;</span><span></span><span class="error" title="Stray end tag “img”.">&lt;/<span class="end-tag">img</span>&gt;</span><span>
+<span id="line312"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line313"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line314"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span>
+<span id="line315"></span></span></pre><menu type="context" id="actions"><menuitem id="goToLine" label="Go to Line…" accesskey="L"></menuitem><menuitem id="wrapLongLines" label="Wrap Long Lines" type="checkbox"></menuitem><menuitem id="highlightSyntax" label="Syntax Highlighting" type="checkbox" checked="true"></menuitem></menu></body></html>

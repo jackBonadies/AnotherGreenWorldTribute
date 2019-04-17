@@ -221,10 +221,14 @@ $(document).ready(function(){
     $('#submenu').empty();
     $("#submenu").append("<p>Resume</p>");
     $("#submenu").append("<p id='link2'>Obligatory 1st Slide</p>");
-    $("#link2").on("click",function(){location.href="/Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/wk1/Bonadies_week1.html";});
-    $("#submenu").append("<p>github</p>");
+    $("#link2").on("click",function(){window.open('/Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/wk1/Bonadies_week1.html', '_blank');});
+    $("#submenu").append("<p id='link3'>github</p>");
+    $("#link3").on("click",function(){window.open('https://github.com/jackBonadies','_blank');});
     $("#submenu").append("<p>other links</p>");
-    $("#submenu").append("<p>More Info</p>");
+    $("#submenu").append("<p id='link4'>More Info</p>");
+    $("#link4").on("click",function(){window.open('./info.html','_blank');});
+
+
     var height1 = $.fn.getNum()*5;
     height1 = height1 + 3 + "vh";
     $("#submenu").css("height",height1);
@@ -236,7 +240,8 @@ $(document).ready(function(){
   });
   $("#presentation").on("click",function(){
     $('#submenu').empty();
-    $("#submenu").append("<p>Brian Eno</p>");
+    $("#submenu").append("<p id='link6'>Brian Eno</p>");
+    $("#link6").on("click",function(){location.href="./main.html";});
     $("#submenu").append("<p id='link1'>Albums Script</p>");
     $("#link1").on("click",function(){location.href="/Users/jackbonadies/lastFMtop50/index.html";});
     var height1 = $.fn.getNum()*5;
