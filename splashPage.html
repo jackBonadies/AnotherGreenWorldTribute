@@ -82,7 +82,7 @@
   }
   a{
     text-decoration:none;
-  } 
+  }
   p, a{
     /* background-color:white; */
     position: relative;
@@ -220,7 +220,8 @@ $(document).ready(function(){
   $("#aboutMe").on("click",function(){
     $('#submenu').empty();
     $("#submenu").append("<p>Resume</p>");
-    $("#submenu").append("<p>Obligatory 1st Slide</p>");
+    $("#submenu").append("<p id='link2'>Obligatory 1st Slide</p>");
+    $("#link2").on("click",function(){location.href="/Users/jackbonadies/Desktop/AnotherGreenWorldWebTribute/wk1/Bonadies_week1.html";});
     $("#submenu").append("<p>github</p>");
     $("#submenu").append("<p>other links</p>");
     $("#submenu").append("<p>More Info</p>");
